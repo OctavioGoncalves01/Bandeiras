@@ -1,0 +1,37 @@
+@using PaisesEBandeiras.Models;
+@using PaisesEBandeiras.Controllers;
+@model List<PaisesModel>
+
+<div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nome do País</th>
+                <th>Capital</th>
+                <th>Bandeira</th>
+                <th>Área (km²)</th>
+                <th>População</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pais in Model)
+            {
+                <tr>
+                    <td>@pais.NomePais</td>
+                    <td>@pais.NomeCapital</td>
+                    <td>
+                        @if (!string.IsNullOrEmpty(pais.Bandeira))
+                        {
+                            <img src="@pais.Bandeira" alt="Bandeira de @pais.NomePais" style="width: 50px; height: auto;" />
+                        }
+                    </td>
+                    <td>@pais.Area</td>
+                    <td>@pais.Populacao?.ToString("N0")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</div>
