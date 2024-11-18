@@ -1,0 +1,33 @@
+@using PaisesEBandeiras.Models;
+@using PaisesEBandeiras.Controllers;
+@model List<PaisesModelDetalhes>
+
+<div class="container">
+    <h1 class="text-center my-7">Detalhes do País</h1>
+    <div class="row justify-content-center">
+        @foreach (var pais in Model)
+        {
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card" style="width: 100%; height: 100%; max-width: 60rem;">
+                    @if (!string.IsNullOrEmpty(pais.Bandeira))
+                    {
+                        <img src="@pais.Bandeira" class="card-img-top" alt="Bandeira de @pais.NomePais" style="height: 300px; width: 100%; object-fit: contain; object-position: center;">
+                    }
+                    <div class="card-body">
+                        <h5 class="card-title">@pais.NomePais</h5>
+                        <p class="card-text"><strong>Capital:</strong> @pais.NomeCapital</p>
+                        <p class="card-text"><strong>Região:</strong> @pais.Regiao</p>
+                        <p class="card-text"><strong>Sub-região:</strong> @pais.SubRegiao</p>
+                        <p class="card-text"><strong>Área (km²):</strong> @pais.Area</p>
+                        <p class="card-text"><strong>População:</strong> @pais.Populacao?.ToString("N0")</p>
+                        <p class="card-text"><strong>Moeda:</strong> @pais.Moeda</p>
+                        <p class="card-text"><strong>Línguas:</strong> @string.Join(", ", pais.Linguas)</p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <a href="@Url.Action("Index", "Paises")" class="btn btn-primary">Voltar à Lista de Países</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

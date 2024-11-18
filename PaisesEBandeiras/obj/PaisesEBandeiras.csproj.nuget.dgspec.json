@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\octav\\OneDrive\\Área de Trabalho\\DIO\\Treino\\Bandeiras\\Bandeiras\\PaisesEBandeiras\\PaisesEBandeiras.csproj": {}
+    "C:\\Users\\octav\\OneDrive\\Área de Trabalho\\DIO\\Treino\\BandeirasEPaises\\Bandeiras\\PaisesEBandeiras\\PaisesEBandeiras.csproj": {}
   },
   "projects": {
-    "C:\\Users\\octav\\OneDrive\\Área de Trabalho\\DIO\\Treino\\Bandeiras\\Bandeiras\\PaisesEBandeiras\\PaisesEBandeiras.csproj": {
+    "C:\\Users\\octav\\OneDrive\\Área de Trabalho\\DIO\\Treino\\BandeirasEPaises\\Bandeiras\\PaisesEBandeiras\\PaisesEBandeiras.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\octav\\OneDrive\\Área de Trabalho\\DIO\\Treino\\Bandeiras\\Bandeiras\\PaisesEBandeiras\\PaisesEBandeiras.csproj",
+        "projectUniqueName": "C:\\Users\\octav\\OneDrive\\Área de Trabalho\\DIO\\Treino\\BandeirasEPaises\\Bandeiras\\PaisesEBandeiras\\PaisesEBandeiras.csproj",
         "projectName": "PaisesEBandeiras",
-        "projectPath": "C:\\Users\\octav\\OneDrive\\Área de Trabalho\\DIO\\Treino\\Bandeiras\\Bandeiras\\PaisesEBandeiras\\PaisesEBandeiras.csproj",
+        "projectPath": "C:\\Users\\octav\\OneDrive\\Área de Trabalho\\DIO\\Treino\\BandeirasEPaises\\Bandeiras\\PaisesEBandeiras\\PaisesEBandeiras.csproj",
         "packagesPath": "C:\\Users\\octav\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\octav\\OneDrive\\Área de Trabalho\\DIO\\Treino\\Bandeiras\\Bandeiras\\PaisesEBandeiras\\obj\\",
+        "outputPath": "C:\\Users\\octav\\OneDrive\\Área de Trabalho\\DIO\\Treino\\BandeirasEPaises\\Bandeiras\\PaisesEBandeiras\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\octav\\AppData\\Roaming\\NuGet\\NuGet.Config"
