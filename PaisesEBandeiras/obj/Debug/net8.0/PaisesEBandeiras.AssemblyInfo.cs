@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PaisesEBandeiras")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+456f5990c43e3e1fc1b6af6c0f10b13164fb8dc6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5a3a199c9af61ee8fb506a7a11eee9dc8fc18407")]
 [assembly: System.Reflection.AssemblyProductAttribute("PaisesEBandeiras")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PaisesEBandeiras")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

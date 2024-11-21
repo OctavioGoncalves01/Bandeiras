@@ -11,7 +11,9 @@
                 <div class="card" style="width: 100%; height: 100%; max-width: 60rem;">
                     @if (!string.IsNullOrEmpty(pais.Bandeira))
                     {
-                        <img src="@pais.Bandeira" class="card-img-top" alt="Bandeira de @pais.NomePais" style="height: 300px; width: 100%; object-fit: contain; object-position: center;">
+                        <img src="@pais.Bandeira" class="card-img-top" alt="Bandeira de 
+                                  @pais.NomePais" style="height: 300px; width: 100%; 
+                                    object-fit: contain; object-position: center;">
                     }
                     <div class="card-body">
                         <h5 class="card-title">@pais.NomePais</h5>

@@ -1,0 +1,50 @@
+@model PaisesEBandeiras.Models.MoedasModel
+
+@{
+    ViewData["Title"] = "Taxas de Câmbio";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+
+        <div class="col-md-5">
+            <h1 class="display-5 text-center">Taxas de Câmbio para @Model.BaseCode</h1>
+            
+            @if (Model.ConversionRates != null && Model.ConversionRates.Count > 0)
+            {
+                <div class="table-responsive">
+
+                    <table class="table table-striped mx-auto">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Moeda</th>
+                                <th>Taxa de Conversão</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.ConversionRates)
+                            {
+                                <tr>
+                                    <td>@item.Key</td>
+                                    <td>$@item.Value</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                    
+                </div>
+
+                <div class="text-center mt-4">
+                    <button onclick="window.history.back()" class="btn btn-primary">Voltar</button>
+                </div>
+            }
+            else
+            {
+                <p class="text-center">Nenhuma taxa de câmbio encontrada.</p>
+            }
+        </div>
+
+       
+    </div>
+</div>
+

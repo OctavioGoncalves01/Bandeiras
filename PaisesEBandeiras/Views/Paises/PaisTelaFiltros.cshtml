@@ -1,4 +1,4 @@
-@using PaisesEBandeiras.Models;
+@* @using PaisesEBandeiras.Models;
 @model List<PaisesModel>
 
 <div class="container mt-4">
@@ -27,19 +27,100 @@
                 <div class="card-header text-center bg-success text-white">
                     <h5>Principais Moedas:</h5>
                 </div>
+                
+                    <div class="card-body">
+                        <div class="list-group">
+                            <a href="@Url.Action("Index", "Moedas", new { nome = "USD" })" class="list-group-item list-group-item-action text-center">Dólar Americano</a>
+                            <a href="@Url.Action("Index", "Moedas", new { nome = "CNY" })" class="list-group-item list-group-item-action text-center">Yuan (Renminbi)</a>
+                            <a href="@Url.Action("Index", "Moedas", new { nome = "JPY" })" class="list-group-item list-group-item-action text-center">Iene</a>
+                            <a href="@Url.Action("Index", "Moedas", new { nome = "EUR" })" class="list-group-item list-group-item-action text-center">Euro</a>
+                            <a href="@Url.Action("Index", "Moedas", new { nome = "INR" })" class="list-group-item list-group-item-action text-center">Rupia Indiana</a>
+                            <a href="@Url.Action("Index", "Moedas", new { nome = "GBP" })" class="list-group-item list-group-item-action text-center">Libra Esterlina</a>
+                            <a href="@Url.Action("Index", "Moedas", new { nome = "BRL" })" class="list-group-item list-group-item-action text-center">Real</a>
+                            <a href="@Url.Action("Index", "Moedas", new { nome = "CAD" })" class="list-group-item list-group-item-action text-center">Dólar Canadense</a>
+                            <a href="@Url.Action("Index", "Moedas", new { nome = "AUD" })" class="list-group-item list-group-item-action text-center">Dólar Australiano</a>
+                            <a href="@Url.Action("Index", "Moedas", new { nome = "MXN" })" class="list-group-item list-group-item-action text-center">Peso Mexicano</a>
+                        </div>
+
+                    </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div> *@
+
+@using PaisesEBandeiras.Models;
+@model List<PaisesModel>
+
+<div class="container mt-4">
+
+    <div class="row mb-4">
+        <!-- Seção de Continentes -->
+        <div class="col-12 col-md-4">
+            <div class="card shadow-lg">
+                <div class="card-header text-center bg-primary text-white">
+                    <h5>Escolha um Continente:</h5>
+                </div>
                 <div class="card-body">
                     <div class="list-group">
-                        <a href="@Url.Action("Detalhes", "Paises", new { moeda = "EUR" })" class="list-group-item list-group-item-action text-center">Euro</a>
-                        <a href="@Url.Action("Detalhes", "Paises", new { moeda = "USD" })" class="list-group-item list-group-item-action text-center">Dólar Americano</a>
-                        <a href="@Url.Action("Detalhes", "Paises", new { moeda = "JPY" })" class="list-group-item list-group-item-action text-center">Iene</a>
-                        <a href="@Url.Action("Detalhes", "Paises", new { moeda = "BRL" })" class="list-group-item list-group-item-action text-center">Real</a>
-                        <a href="@Url.Action("Detalhes", "Paises", new { moeda = "GBP" })" class="list-group-item list-group-item-action text-center">Libra Esterlina</a>
-                        <a href="@Url.Action("Detalhes", "Paises", new { moeda = "CHF" })" class="list-group-item list-group-item-action text-center">Franco Suíço</a>
+                        <a href="@Url.Action("ResultadoFiltro", "Paises", new { continente = "africa" })" class="list-group-item list-group-item-action text-center">África</a>
+                        <a href="@Url.Action("ResultadoFiltro", "Paises", new { continente = "asia" })" class="list-group-item list-group-item-action text-center">Ásia</a>
+                        <a href="@Url.Action("ResultadoFiltro", "Paises", new { continente = "europe" })" class="list-group-item list-group-item-action text-center">Europa</a>
+                        <a href="@Url.Action("ResultadoFiltro", "Paises", new { continente = "oceania" })" class="list-group-item list-group-item-action text-center">Oceania</a>
+                        <a href="@Url.Action("ResultadoFiltro", "Paises", new { continente = "americas" })" class="list-group-item list-group-item-action text-center">Américas</a>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Seção de Moedas -->
+        <div class="col-12 col-md-4">
+            <div class="card shadow-lg">
+                <div class="card-header text-center bg-success text-white">
+                    <h5>Principais Moedas:</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="@Url.Action("Index", "Moedas", new { nome = "USD" })" class="list-group-item list-group-item-action text-center">Dólar Americano</a>
+                        <a href="@Url.Action("Index", "Moedas", new { nome = "CNY" })" class="list-group-item list-group-item-action text-center">Yuan (Renminbi)</a>
+                        <a href="@Url.Action("Index", "Moedas", new { nome = "JPY" })" class="list-group-item list-group-item-action text-center">Iene</a>
+                        <a href="@Url.Action("Index", "Moedas", new { nome = "EUR" })" class="list-group-item list-group-item-action text-center">Euro</a>
+                        <a href="@Url.Action("Index", "Moedas", new { nome = "INR" })" class="list-group-item list-group-item-action text-center">Rupia Indiana</a>
+                        <a href="@Url.Action("Index", "Moedas", new { nome = "GBP" })" class="list-group-item list-group-item-action text-center">Libra Esterlina</a>
+                        <a href="@Url.Action("Index", "Moedas", new { nome = "BRL" })" class="list-group-item list-group-item-action text-center">Real</a>
+                        <a href="@Url.Action("Index", "Moedas", new { nome = "CAD" })" class="list-group-item list-group-item-action text-center">Dólar Canadense</a>
+                        <a href="@Url.Action("Index", "Moedas", new { nome = "AUD" })" class="list-group-item list-group-item-action text-center">Dólar Australiano</a>
+                        <a href="@Url.Action("Index", "Moedas", new { nome = "MXN" })" class="list-group-item list-group-item-action text-center">Peso Mexicano</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Seção de Capitais -->
+        <div class="col-12 col-md-4">
+            <div class="card shadow-lg">
+                <div class="card-header text-center bg-warning text-white">
+                    <h5>Principais Capitais:</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group">
+                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Londres" })" class="list-group-item list-group-item-action text-center">Londres</a>
+                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Paris" })" class="list-group-item list-group-item-action text-center">Paris</a>
+                        <a href="@Url.Action("Clima", "Clima", new { cidade = "NovaYork" })" class="list-group-item list-group-item-action text-center">Nova York</a>
+                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Tóquio" })" class="list-group-item list-group-item-action text-center">Tóquio</a>
+                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Pequim" })" class="list-group-item list-group-item-action text-center">Pequim</a>
+                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Sydney" })" class="list-group-item list-group-item-action text-center">Sydney</a>
+                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Moscou" })" class="list-group-item list-group-item-action text-center">Moscou</a>
+                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Brasilia" })" class="list-group-item list-group-item-action text-center">Brasilia</a>
+                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Cairo" })" class="list-group-item list-group-item-action text-center">Cairo</a>
+                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Washington" })" class="list-group-item list-group-item-action text-center">Washington</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </div>
