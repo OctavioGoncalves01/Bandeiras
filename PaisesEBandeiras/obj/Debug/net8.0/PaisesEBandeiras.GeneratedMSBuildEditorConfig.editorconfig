@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\octav\OneDrive\Área de Trabalho\DIO\Treino\BandeirasEPaises\Bandeiras\PaisesEBandeiras
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/octav/OneDrive/Área de Trabalho/DIO/Treino/BandeirasEPaises/Bandeiras/PaisesEBandeiras/Views/Clima/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpbWFcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/octav/OneDrive/Área de Trabalho/DIO/Treino/BandeirasEPaises/Bandeiras/PaisesEBandeiras/Views/Moedas/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTW9lZGFzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

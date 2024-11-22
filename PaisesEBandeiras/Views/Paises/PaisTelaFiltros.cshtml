@@ -1,64 +1,48 @@
-@* @using PaisesEBandeiras.Models;
+@using PaisesEBandeiras.Models;
 @model List<PaisesModel>
 
 <div class="container mt-4">
-
-    <div class="row mb-4">
-
-        <div class="col-12 col-md-6">
-            <div class="card shadow-lg">
-                <div class="card-header text-center bg-primary text-white">
-                    <h5>Escolha um Continente:</h5>
-                </div>
-                <div class="card-body">
-                    <div class="list-group">
-                        <a href="@Url.Action("ResultadoFiltro", "Paises", new { continente = "africa" })" class="list-group-item list-group-item-action text-center">África</a>
-                        <a href="@Url.Action("ResultadoFiltro", "Paises", new { continente = "asia" })" class="list-group-item list-group-item-action text-center">Ásia</a>
-                        <a href="@Url.Action("ResultadoFiltro", "Paises", new { continente = "europe" })" class="list-group-item list-group-item-action text-center">Europa</a>
-                        <a href="@Url.Action("ResultadoFiltro", "Paises", new { continente = "oceania" })" class="list-group-item list-group-item-action text-center">Oceania</a>
-                        <a href="@Url.Action("ResultadoFiltro", "Paises", new { continente = "americas" })" class="list-group-item list-group-item-action text-center">Américas</a>
+    
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Tela de Filtros - Exploração de Dados Globais</h2>
+        
+        <p class="lead text-center">
+            Esta tela interativa permite acessar diferentes informações sobre o mundo, organizadas de maneira fácil e prática:
+        </p>
+        
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Filtrar Países por Continente</h5>
+                        <p class="card-text">Explore os países de diferentes continentes com facilidade. Selecione um continente para ver todos os países que ele abrange, ajudando você a entender melhor a distribuição geográfica ao redor do globo.</p>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="col-12 col-md-6">
-            <div class="card shadow-lg">
-                <div class="card-header text-center bg-success text-white">
-                    <h5>Principais Moedas:</h5>
-                </div>
-                
+            
+            <div class="col-md-4">
+                <div class="card text-center">
                     <div class="card-body">
-                        <div class="list-group">
-                            <a href="@Url.Action("Index", "Moedas", new { nome = "USD" })" class="list-group-item list-group-item-action text-center">Dólar Americano</a>
-                            <a href="@Url.Action("Index", "Moedas", new { nome = "CNY" })" class="list-group-item list-group-item-action text-center">Yuan (Renminbi)</a>
-                            <a href="@Url.Action("Index", "Moedas", new { nome = "JPY" })" class="list-group-item list-group-item-action text-center">Iene</a>
-                            <a href="@Url.Action("Index", "Moedas", new { nome = "EUR" })" class="list-group-item list-group-item-action text-center">Euro</a>
-                            <a href="@Url.Action("Index", "Moedas", new { nome = "INR" })" class="list-group-item list-group-item-action text-center">Rupia Indiana</a>
-                            <a href="@Url.Action("Index", "Moedas", new { nome = "GBP" })" class="list-group-item list-group-item-action text-center">Libra Esterlina</a>
-                            <a href="@Url.Action("Index", "Moedas", new { nome = "BRL" })" class="list-group-item list-group-item-action text-center">Real</a>
-                            <a href="@Url.Action("Index", "Moedas", new { nome = "CAD" })" class="list-group-item list-group-item-action text-center">Dólar Canadense</a>
-                            <a href="@Url.Action("Index", "Moedas", new { nome = "AUD" })" class="list-group-item list-group-item-action text-center">Dólar Australiano</a>
-                            <a href="@Url.Action("Index", "Moedas", new { nome = "MXN" })" class="list-group-item list-group-item-action text-center">Peso Mexicano</a>
-                        </div>
-
+                        <h5 class="card-title">Consultar Câmbio das Principais Moedas</h5>
+                        <p class="card-text">Fique atualizado com as taxas de câmbio das principais moedas do mundo. Compare valores em tempo real para realizar transações internacionais ou obter informações econômicas relevantes.</p>
                     </div>
-
-
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h5 class="card-title">Ver o Clima nas Principais Cidades</h5>
+                        <p class="card-text">Obtenha dados meteorológicos atualizados das principais cidades do mundo. Saiba a temperatura, umidade, vento e outras condições climáticas importantes para planejar viagens ou simplesmente entender o clima global.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
     </div>
 
-</div> *@
+    <div class="row mt-4 mb-4">
 
-@using PaisesEBandeiras.Models;
-@model List<PaisesModel>
-
-<div class="container mt-4">
-
-    <div class="row mb-4">
-        <!-- Seção de Continentes -->
         <div class="col-12 col-md-4">
             <div class="card shadow-lg">
                 <div class="card-header text-center bg-primary text-white">
@@ -76,7 +60,6 @@
             </div>
         </div>
 
-        <!-- Seção de Moedas -->
         <div class="col-12 col-md-4">
             <div class="card shadow-lg">
                 <div class="card-header text-center bg-success text-white">
@@ -99,28 +82,34 @@
             </div>
         </div>
 
-        <!-- Seção de Capitais -->
         <div class="col-12 col-md-4">
             <div class="card shadow-lg">
                 <div class="card-header text-center bg-warning text-white">
                     <h5>Principais Capitais:</h5>
                 </div>
                 <div class="card-body">
+                    
                     <div class="list-group">
-                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Londres" })" class="list-group-item list-group-item-action text-center">Londres</a>
-                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Paris" })" class="list-group-item list-group-item-action text-center">Paris</a>
-                        <a href="@Url.Action("Clima", "Clima", new { cidade = "NovaYork" })" class="list-group-item list-group-item-action text-center">Nova York</a>
-                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Tóquio" })" class="list-group-item list-group-item-action text-center">Tóquio</a>
-                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Pequim" })" class="list-group-item list-group-item-action text-center">Pequim</a>
-                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Sydney" })" class="list-group-item list-group-item-action text-center">Sydney</a>
-                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Moscou" })" class="list-group-item list-group-item-action text-center">Moscou</a>
-                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Brasilia" })" class="list-group-item list-group-item-action text-center">Brasilia</a>
-                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Cairo" })" class="list-group-item list-group-item-action text-center">Cairo</a>
-                        <a href="@Url.Action("Clima", "Clima", new { cidade = "Washington" })" class="list-group-item list-group-item-action text-center">Washington</a>
+                        <a href="@Url.Action("Index", "Clima", new { cidade = "London" })" class="list-group-item list-group-item-action text-center">London</a>
+                        <a href="@Url.Action("Index", "Clima", new { cidade = "Paris" })" class="list-group-item list-group-item-action text-center">Paris</a>
+                        <a href="@Url.Action("Index", "Clima", new { cidade = "New-York" })" class="list-group-item list-group-item-action text-center">New York</a>
+                        <a href="@Url.Action("Index", "Clima", new { cidade = "Tokyo" })" class="list-group-item list-group-item-action text-center">Tokyo</a>
+                        <a href="@Url.Action("Index", "Clima", new { cidade = "Beijing" })" class="list-group-item list-group-item-action text-center">Beijing</a>
+                        <a href="@Url.Action("Index", "Clima", new { cidade = "Sydney" })" class="list-group-item list-group-item-action text-center">Sydney</a>
+                        <a href="@Url.Action("Index", "Clima", new { cidade = "Moscow" })" class="list-group-item list-group-item-action text-center">Moscow</a>
+                        <a href="@Url.Action("Index", "Clima", new { cidade = "Brasilia" })" class="list-group-item list-group-item-action text-center">Brasilia</a>
+                        <a href="@Url.Action("Index", "Clima", new { cidade = "Cairo" })" class="list-group-item list-group-item-action text-center">Cairo</a>
+                        <a href="@Url.Action("Index", "Clima", new { cidade = "Washington" })" class="list-group-item list-group-item-action text-center">Washington</a>
                     </div>
+
+
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="text-center mt-4">
+        <a href="javascript:history.back()" class="btn btn-primary">Voltar</a>
     </div>
 
 </div>

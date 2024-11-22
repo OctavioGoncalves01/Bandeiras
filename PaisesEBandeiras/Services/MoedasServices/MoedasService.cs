@@ -16,7 +16,7 @@ namespace PaisesEBandeiras.Services.MoedasServices
         public async Task<MoedasModel> BuscarCambioEspecifico(string nome)
         {
             
-            var apiUrl = $"https://v6.exchangerate-api.com/v6/API_KEY/latest/{nome}"; 
+            var apiUrl = $"https://v6.exchangerate-api.com/v6/APY_Key/latest/{nome}"; 
 
 
             var response = await _httpClient.GetStringAsync(apiUrl);

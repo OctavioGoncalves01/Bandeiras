@@ -2,8 +2,15 @@
 @using PaisesEBandeiras.Controllers;
 @model List<PaisesModelDetalhes>
 
-<div class="container">
-    <h1 class="text-center my-7">Detalhes do País</h1>
+<div class="container mt-5">
+
+    <h1 class="text-center mb-4">Detalhes do País</h1>
+    
+    <div class="alert alert-info text-center mb-4">
+        <p><strong>Descubra todos os detalhes sobre o país selecionado!</strong></p>
+        <p>Esta página fornece informações detalhadas sobre o país, como sua capital, região, sub-região, população, moeda, idiomas falados e muito mais. Explore os dados exclusivos de cada nação e volte facilmente para a lista de países para ver mais opções.</p>
+    </div>
+
     <div class="row justify-content-center">
         @foreach (var pais in Model)
         {

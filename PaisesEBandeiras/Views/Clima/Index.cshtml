@@ -1,0 +1,77 @@
+@model PaisesEBandeiras.Models.WeatherModel
+
+@{
+    ViewData["Title"] = "Clima de " + Model.Location.Name;
+}
+
+<div class="container mt-5">
+    <h2 class="text-center">Clima de @Model.Location.Name, @Model.Location.Country</h2>
+
+    <table class="table table-bordered table-striped table-hover mx-auto mt-4" style="max-width: 600px;">
+        <tbody>
+            <tr>
+                <th scope="row">Nome</th>
+                <td>@Model.Location.Name</td>
+            </tr>
+            <tr>
+                <th scope="row">Região</th>
+                <td>@Model.Location.Region</td>
+            </tr>
+            <tr>
+                <th scope="row">País</th>
+                <td>@Model.Location.Country</td>
+            </tr>
+            <tr>
+                <th scope="row">Latitude</th>
+                <td>@Model.Location.Lat</td>
+            </tr>
+            <tr>
+                <th scope="row">Longitude</th>
+                <td>@Model.Location.Lon</td>
+            </tr>
+            <tr>
+                <th scope="row">Fuso Horário</th>
+                <td>@Model.Location.Timezone</td>
+            </tr>
+            <tr>
+                <th scope="row">Data e Hora Local</th>
+                <td>@Model.Location.Localtime</td>
+            </tr>
+            <tr>
+                <th scope="row">Temperatura</th>
+                <td>@Model.Current.TempC °C (@Model.Current.TempF °F)</td>
+            </tr>
+            <tr>
+                <th scope="row">Condição</th>
+                <td>@Model.Current.Condition.Text</td>
+            </tr>
+            <tr>
+                <th scope="row">Sensação Térmica</th>
+                <td>@Model.Current.FeelslikeC °C (@Model.Current.FeelslikeF °F)</td>
+            </tr>
+            <tr>
+                <th scope="row">Vento</th>
+                <td>@Model.Current.WindMph mph (@Model.Current.WindKph kph), direção @Model.Current.WindDir</td>
+            </tr>
+            <tr>
+                <th scope="row">Umidade</th>
+                <td>@Model.Current.Humidity %</td>
+            </tr>
+            <tr>
+                <th scope="row">Visibilidade</th>
+                <td>@Model.Current.VisKm km (@Model.Current.VisMiles mi)</td>
+            </tr>
+            <tr>
+                <th scope="row">Ícone</th>
+                <td>
+                    <img src="https:@Model.Current.Condition.Icon" alt="@Model.Current.Condition.Text" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div class="text-center mt-4">
+        <a href="javascript:history.back()" class="btn btn-primary">Voltar</a>
+    </div>
+</div>
